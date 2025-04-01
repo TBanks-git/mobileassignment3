@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile Messages</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .msg-date { 
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+    <div data-role="header" data-position="fixed">
+        <h1>Messages</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-notext">Settings</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#inbox" data-transition="slide">
+                Inbox
+                <span class="ui-li-count">12</span>
+            </a></li>
+            <li><a href="#drafts" data-transition="slide">
+                Drafts
+                <span class="ui-li-count">2</span>
+            </a></li>
+            <li><a href="#sent" data-transition="slide">
+                Sent
+                <span class="ui-li-count">25</span>
+            </a></li>
+            <li><a href="#trash" data-transition="slide">
+                Trash
+                <span class="ui-li-count">8</span>
+            </a></li>
+        </ul>
+        
+        <div class="ui-grid-a" style="margin-top: 20px;">
+            <div class="ui-block-a">
+                <a href="#" class="ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus">Compose</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" class="ui-btn ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star">Bookmark</a></li>
+                <li><a href="#" data-icon="gear">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- INBOX PAGE -->
+<div data-role="page" id="inbox">
+    <div data-role="header" data-position="fixed">
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Back</a>
+        <h1>Inbox</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-notext">Settings</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                    <h3>Kennesaw State University</h3>
+                    <p><strong>Summer Registration</strong></p>
+                    <p>Dear Students, Summer 2025 registration...</p>
+                    <span class="msg-date">2h ago</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>Robert Banks</h3>
+                    <p><strong>Weekly Updates</strong></p>
+                    <p>Good afternoon, This week we will cover...</p>
+                    <span class="msg-date">5h ago</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star">Bookmark</a></li>
+                <li><a href="#" data-icon="gear">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- DRAFTS PAGE -->
+<div data-role="page" id="drafts">
+    <div data-role="header" data-position="fixed">
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Back</a>
+        <h1>Drafts</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-notext">Settings</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                    <h3>Amy Johnson</h3>
+                    <p><strong>Draft: Project Proposal</strong></p>
+                    <p>Dr. Johnson, My project proposal is...</p>
+                    <span class="msg-date">Yesterday</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star">Bookmark</a></li>
+                <li><a href="#" data-icon="gear">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SENT PAGE -->
+<div data-role="page" id="sent">
+    <div data-role="header" data-position="fixed">
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Back</a>
+        <h1>Sent</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-notext">Settings</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                    <h3>Sarah Williams</h3>
+                    <p><strong>Re: Meeting Notes</strong></p>
+                    <p>Please find attached the meeting...</p>
+                    <span class="msg-date">3 days ago</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star">Bookmark</a></li>
+                <li><a href="#" data-icon="gear">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- TRASH PAGE -->
+<div data-role="page" id="trash">
+    <div data-role="header" data-position="fixed">
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Back</a>
+        <h1>Trash</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-gear ui-btn-icon-notext">Settings</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                    <h3>Newsletter</h3>
+                    <p><strong>Monthly Update</strong></p>
+                    <p>Our latest product news and...</p>
+                    <span class="msg-date">1 week ago</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#" data-icon="star">Bookmark</a></li>
+                <li><a href="#" data-icon="gear">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
